@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Winspa Barber Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+integrity="sha512-A2EoeFJ/FnR8ZcMaZH2nGJvY1jN8cW7zVskZnKGaGzM8exE1v6W2vdOpT6/HD6W8OYK/wHw4gSU6kjg5v5H4jw==" 
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+    <nav style="background-color: rgba(0, 0, 0, 0.7); padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wr">
+        <div class="logo" style="display: flex; align-items: center; gap: 0.6rem; font-size: 1.2rem; font-weight: bold; color: #fff;">
+          <img src="winspa logo.png" alt="logo" style="width: 70px; height: auto; border-radius: 50%; background-color: black;">
+        </div>
+        <ul style="list-style: none; display: flex; gap: 1.2rem; flex-wrap: wrap; margin: 0;">
+          <li><a href="/index.html" style="text-decoration: none; color: #fff; font-weight: 600;">Home</a></li>
+        </ul>
+      </nav>
+      <style>
+        body {
+          font-family: 'Outfit', sans-serif;
+          background-color: #f4f4f4;
+          margin: 0;
+          padding: 0;
+        }
+        .gallery-container {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          gap: 10px;
+          padding: 20px;
+        }
+        .gallery-item {
+          position: relative;
+          overflow: hidden;
+        }
+        .gallery-item img,
+        .gallery-item video {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+        }
+        .gallery-item video {
+          border-radius: 8px;
+        }   
+        .gallery-item video:hover {
+          transform: scale(1.05);
+          transition: transform 0.3s ease;
+        }
+        .gallery-item img:hover {
+          transform: scale(1.05);
+          transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+          background-color: rgba(0, 0, 0, 0.7);
+          padding: 0.5rem;
+          text-align: center;
+          color: #fff;
+        }
+        .video-button {
+         display: block;
+         margin: 10px auto 0;
+        padding: 8px 12px;
+        background-color: gold;
+        color: black;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        }
+
+       .video-button:hover {
+        background-color: darkgoldenrod;
+        color: white;
+        }
+
+        .section-title {
+          text-align: center;
+          font-size: 2rem;
+          margin: 20px 0;
+          color: gold;
+        }
+        .gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.video-button {
+  display: block;
+  margin: 10px auto 0;
+  padding: 8px 12px;
+  background-color: gold;
+  color: black;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.video-button:hover {
+  background-color: darkgoldenrod;
+  color: white;
+}
+
+/* Media query for phones */
+@media (max-width: 600px) {
+  .gallery-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller columns for phones */
+    gap: 8px; /* Reduce gap between items */
+  }
+
+  .gallery-item {
+    width: 100%; /* Ensure items take full width of their container */
+  }
+
+  .video-button {
+    font-size: 12px; /* Adjust button size for smaller screens */
+    padding: 6px 10px;
+  }
+}
+        </style>
+<body>
+      <section id="gallery">
+        <h2 style="color: gold; text-align: center;">Gallery</h2>
+        <div class="gallery-container">
+          <div class="gallery-item">
+            <img src="IMG-20250420-WA0029.jpg" alt="Haircut 1">
+          </div>
+          <div class="gallery-item">
+            <img src="IMG-20250420-WA0021.jpg" alt="Haircut 2">
+          </div>
+          <div class="gallery-item">
+            <img src="pic1.jpeg"alt="Haircut 3">
+          </div>
+          <div class="gallery-item">
+            <img src="edi2.jpeg" alt="Haircut 4">
+          </div>
+          <div class="gallery-item">
+            <img src="pic4.jpeg" alt="Haircut 5">
+          </div>
+          <div class="gallery-item">
+            <img src="IMG-20250420-WA0029.jpg" alt="Haircut 6">
+          </div>
+          <div class="gallery-item">
+            <img src="pic3.jpeg" alt="Haircut 7">
+          </div>
+          <div class="gallery-item">
+            <video controls>
+              <source src="vid.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <button class="video-button" onclick="window.location.href='vid.mp4'">Watch Full Video</button>
+          </div>
+          <div class="gallery-item">
+            <video controls>
+              <source src="vid1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <button class="video-button" onclick="window.location.href='vid1.mp4'">Watch Full Video</button>
+          </div>
+          <div class="gallery-item">
+            <video controls>
+              <source src="VID-20250420-WA0012.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <button class="video-button" onclick="window.location.href='VID-20250420-WA0012.mp4'">Watch Full Video</button>
+          </div>
+          <div class="gallery-item">
+            <video controls>
+              <source src="VID-20250420-WA0025.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <button class="video-button" onclick="window.location.href='VID-20250420-WA0025.mp4'">Watch Full Video</button>
+          </div>
+          <div class="gallery-item">
+            <video controls>
+              <source src="VID-20250420-WA0057.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <button class="video-button" onclick="window.location.href='VID-20250420-WA0057.mp4'">Watch Full Video</button>
+          </div>
+          <div class="gallery-item">
+            <video controls>
+              <source src="VID-20250420-WA0059.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <button class="video-button" onclick="window.location.href='VID-20250420-WA0059.mp4'">Watch Full Video</button>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <p>&copy; 2025 Winspa Barber Shop. All rights reserved.</p>
+        <p>Designed by CodeNova(0701380461)</p>
+      </footer>
+      </body>
+</html>

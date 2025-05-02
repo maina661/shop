@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Winspa Barber Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-A2EoeFJ/FnR8ZcMaZH2nGJvY1jN8cW7zVskZnKGaGzM8exE1v6W2vdOpT6/HD6W8OYK/wHw4gSU6kjg5v5H4jw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <style>
+    body {
+      background-image: url("abt1.jpeg");
+      background-size: cover; /* Make the image cover the entire background */
+      background-position: center; /* Center the image */
+      background-attachment: fixed; /* Fix the image in place when scrolling */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 1rem 1.5rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    nav .logo img {
+      width: 50px;
+      height: auto;
+      border-radius: 50%;
+      background-color: black;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .about {
+      padding: 4rem 2rem;
+      background-color: #f9f9f9;
+    }
+  
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .about-text {
+      flex: 1;
+      min-width: 280px;
+    }
+    
+    .about-text h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+    
+    .about-text p {
+      font-size: 1rem;
+      color:  white;
+      background-color: black;
+      line-height: 1.6;
+    }
+    
+    .about-image {
+      flex: 1;
+      min-width: 330px;
+      text-align: center;
+    }
+    
+    .about-image img {
+      width: 100%;
+      max-width: 400px;
+      color: rgba(0, 0, 0, 0.7);
+      border-radius: 16px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    }
+  
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    
+    .btn:hover {
+      background-color: #e5c100;
+    }
+    
+    .invisible {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+    
+    .visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+ 
+/* Media Query for Phones */
+@media (max-width: 768px) {
+  .about-section h2 {
+    font-size: 1.6rem; /* Adjust heading size */
+  }
+
+  .about-section p {
+    font-size: 0.9rem; /* Adjust paragraph size */
+    line-height: 1.4; /* Adjust line height */
+  }
+}
+    
+  </style>
+</head>
+<body>
+
+<nav style="background-color: rgba(0, 0, 0, 0.7); padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wr">
+  <div class="logo" style="display: flex; align-items: center; gap: 0.6rem; font-size: 1.2rem; font-weight: bold; color: #fff;">
+    <img src="winspa logo.png" alt="logo" style="width: 70px; height: auto; border-radius: 50%; background-color: black;">
+  </div>
+  <ul style="list-style: none; display: flex; gap: 1.2rem; flex-wrap: wrap; margin: 0;">
+    <li><a href="/index.html" style="text-decoration: none; color: #fff; font-weight: 600;">Home</a></li>
+  </ul>
+</nav>
+<section id="about">
+    <div class="about-container">
+      <div class="about-text">
+        <a href="/services/index.html" class="btn">Explore Services</a>
+        <h2><span style="color: black;">
+        <p>Welcome to <strong>Royal Fades Barbershop</strong> — where precision meets style. With years of experience, our skilled barbers provide the freshest cuts, cleanest shaves, and the best grooming services in town.</p>
+        <p>We blend tradition with modern trends to give you a look that suits your lifestyle. Whether it's a quick trim or a full transformation, we got you.>In addition to traditional barbering services, we specialize in dreadlocks. Whether you're interested in getting new dreadlocks, maintaining your existing ones, or looking for an expert consultation, our team is equipped with the skills and knowledge to help you achieve the look you desire. We take great pride in providing a clean and comfortable environment while using the best products for your hair.</p>
+      </div>
+      <div class="about-image">
+        <img src="barber 1.jpeg" alt="Barbershop interior or barber at work">
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
